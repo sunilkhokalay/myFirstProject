@@ -50,6 +50,14 @@ class gmail:
         sendButton.click()
         time.sleep(10)
 
+    def logout(self):
+        logoutButton1 = self.driver.find_element(By.XPATH,"//*[@id='gb']/div[1]/div[1]/div[2]/div[4]/div[1]/a/span")
+        logoutButton1.click()
+        logoutButton = self.driver.find_element(By.XPATH,"//*[@id='gb_71']")
+        logoutButton.click()
+        time.sleep(5)
+
+
     def quit(self):
         self.driver.quit()
 
@@ -59,3 +67,6 @@ obj.login()
 time.sleep(10)
 obj.sendMail('skumarkh@cisco.com','Hiii',"Hi This is automated mail!!!")
 time.sleep(10)
+obj.logout()
+time.sleep(10)
+obj.quit()
