@@ -60,13 +60,3 @@ class gmail:
 
     def quit(self):
         self.driver.quit()
-
-obj = gmail('sunilkhokalay','sunil@aricent')
-time.sleep(10)
-obj.login()
-time.sleep(10)
-obj.sendMail('skumarkh@cisco.com','Hiii',"Hi This is automated mail!!!")
-time.sleep(10)
-obj.logout()
-time.sleep(10)
-obj.quit()
